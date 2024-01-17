@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "QuestionCSVUploader" class ="ru.otus.spring.dao.QuestionCSVUploaderImpl">
+    </bean>
+
+    <bean id = "csvResourceLoader" class="ru.otus.spring.dao.CSVResourceLoader">
+        <property name="fileName" value = "/Questionnarie.csv"/>
+    </bean>
+    <bean id="Test" class="ru.otus.spring.domain.Test">
+    </bean>
+<!--    <bean id="TestQuestionsUploader" class="ru.otus.spring.service.TestQuestionsUploaderCSV">
+        <constructor-arg index="0" ref="Test"/>
+        <constructor-arg index="1" ref="csvResourceLoader"/>
+        <constructor-arg index="2" ref="QuestionCSVUploader"/>
+    </bean>-->
+
+</beans>
